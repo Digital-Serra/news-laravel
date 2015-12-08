@@ -16,7 +16,7 @@ class NewsServiceProvider extends ServiceProvider
     {
         //Load routes
         if (! $this->app->routesAreCached()) {
-            require __DIR__.'/Http/routes.php';
+            require __DIR__.'../Http/routes.php';
         }
 
         //Load views
