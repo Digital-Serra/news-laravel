@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace DigitalSerra\NewsLaravel\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,6 +16,6 @@ class Tag extends Model
      */
     public function news()
     {
-        return $this->belongsToMany('App\News', 'news_tag', 'tag_id', 'news_id');
+        return $this->belongsToMany(News::class, 'news_tag', 'tag_id', 'news_id');
     }
 }

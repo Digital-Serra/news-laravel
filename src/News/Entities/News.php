@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace DigitalSerra\NewsLaravel\Entities;
 
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
@@ -44,7 +44,7 @@ class News extends Model implements SluggableInterface
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'news_tag', 'news_id', 'tag_id');
+        return $this->belongsToMany(Tag::class, 'news_tag', 'news_id', 'tag_id');
     }
 
     /**
@@ -53,6 +53,6 @@ class News extends Model implements SluggableInterface
      */
     public function pictures()
     {
-        return $this->hasMany('App\Picture');
+        return $this->hasMany(Picture::class);
     }
 }

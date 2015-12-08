@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace DigitalSerra\NewsLaravel\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +18,6 @@ class Picture extends Model
      */
     public function news()
     {
-        return $this->belongsTo('App\News','news_id');
+        return $this->belongsTo(News::class,'news_id');
     }
 }
