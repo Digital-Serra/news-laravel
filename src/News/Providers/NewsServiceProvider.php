@@ -14,9 +14,18 @@ class NewsServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        //Load routes
         if (! $this->app->routesAreCached()) {
-            require __DIR__.'';
+            require __DIR__.'/Http/routes.php';
         }
+
+        //Load views
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'test');
+
+        //Publish Migrations
+        $this->publishes([
+            __DIR__.'/resources/migrations/' => database_path('/migrations')
+        ], 'migrations');
     }
 
     public function register()
