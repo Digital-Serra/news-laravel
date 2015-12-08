@@ -1,4 +1,5 @@
-###Installation
+##In development!
+####Installation
 Require the package:
 ```
 composer require digitalserra/news-laravel
