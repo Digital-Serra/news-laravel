@@ -14,6 +14,9 @@ class NewsServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'';
+        }
     }
 
     public function register()
