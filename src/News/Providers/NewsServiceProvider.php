@@ -20,11 +20,11 @@ class NewsServiceProvider extends ServiceProvider
         }
 
         //Load views
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'test');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'news');
 
         //Publish Migrations
         $this->publishes([
-            __DIR__.'/resources/migrations/' => database_path('/migrations')
+            __DIR__.'/../resources/migrations/' => database_path('/migrations')
         ], 'migrations');
     }
 
