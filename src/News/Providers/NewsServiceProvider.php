@@ -5,7 +5,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-namespace DigitalSerra\NewsLaravel;
+namespace DigitalSerra\NewsLaravel\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
